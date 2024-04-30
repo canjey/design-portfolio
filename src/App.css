@@ -12,3 +12,6 @@
     transform: translateY(0);
   }
   
+  .MuiInput-root{
+        color: aliceblue;
+}

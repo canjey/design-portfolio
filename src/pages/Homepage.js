@@ -6,7 +6,8 @@ import Aboutme from "../components/Aboutme";
 import Services from "../components/services";
 import Skills from "../components/skills";
 import { motion } from 'framer-motion';
-import ScrollMotionComponent from "../components/Projects";
+import Contact from "../components/Contact";
+import darkTheme from "../Theme/theme";
 
 
 export default function Homepage() {
@@ -26,17 +27,7 @@ export default function Homepage() {
       };
     
 
-    const darkTheme = createTheme({
-        typography: {
-            body1: {
-                fontFamily: 'cursive'
-            },
-            h3: {
-                fontFamily: 'poppins',
-                color: "azure"
-            }
-        }
-    })
+    
     return (
         <>
             <div>
@@ -52,7 +43,7 @@ export default function Homepage() {
                         </motion.Grid>
                         <Services />
                         <Skills />
-                        <ScrollMotionComponent />
+                        <Contact />
 
                     </div>
 

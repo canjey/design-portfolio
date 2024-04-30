@@ -8,6 +8,7 @@ import Skills from "../components/skills";
 import { motion } from 'framer-motion';
 import Contact from "../components/Contact";
 import darkTheme from "../Theme/theme";
+import Projects from "../components/Projects";
 
 
 export default function Homepage() {
@@ -43,6 +44,7 @@ export default function Homepage() {
                         </motion.Grid>
                         <Services />
                         <Skills />
+                        <Projects />
                         <Contact />
 
                     </div>

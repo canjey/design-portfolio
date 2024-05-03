@@ -84,9 +84,24 @@ export default function Projects() {
                     <TabContext value={value}>
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <TabList onChange={handleChange} aria-label="lab API tabs example">
-                                <Tab label="All Project" value="1" color="white" />
-                                <Tab label="Web Development" value="2" />
-                                <Tab label="UI/UX Design" value="3" />
+                                <Tab label="All Project" value="1" sx={{
+                                    color: 'white',
+                                    '& ..MuiTab-textColorPrimary': {
+                                        '& textColor': 'primary',
+                                    }
+                                }} />
+                                <Tab label="Web Development" value="2" sx={{
+                                    color: 'white',
+                                    '& ..MuiTab-textColorPrimary': {
+                                        '& textColor': 'primary',
+                                    }
+                                }} />
+                                <Tab label="UI/UX Design" value="3" sx={{
+                                    color: 'white',
+                                    '& ..MuiTab-textColorPrimary': {
+                                        '& textColor': 'primary',
+                                    }
+                                }} />
                             </TabList>
                         </Box>
 
@@ -117,27 +132,27 @@ export default function Projects() {
 
                     </TabPanel>
                     <TabPanel value="2">
-                    <Grid sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                        <Grid sx={{ display: 'flex', flexWrap: 'wrap' }}>
                             {filteredProjects.map((item) => (
                                 <Card sx={{ width: '350px', backgroundColor: '', marginLeft: '30px', marginTop: '10px' }}>
-                                <CardContent>
-                                    <img src={item.image} style={{ height: '180px' }} />
-                                    <Typography variant="body1" sx={{ marginTop: '15px' }}> {item.title}</Typography>
-                                </CardContent>
+                                    <CardContent>
+                                        <img src={item.image} style={{ height: '180px' }} />
+                                        <Typography variant="body1" sx={{ marginTop: '15px' }}> {item.title}</Typography>
+                                    </CardContent>
 
-                            </Card>
+                                </Card>
                             ))}
                         </Grid></TabPanel>
-                        <TabPanel value="3">
+                    <TabPanel value="3">
                         <Grid sx={{ display: 'flex', flexWrap: 'wrap' }}>
                             {filteredUI.map((project, index) => (
                                 <Card sx={{ width: '350px', backgroundColor: '#000000cf', marginLeft: '30px', marginTop: '10px' }}>
-                                <CardContent>
-                                    <img src={project.image} style={{ height: '180px' }} />
-                                    <Typography variant="body1" sx={{ marginTop: '15px' }}> {project.title}</Typography>
-                                </CardContent>
+                                    <CardContent>
+                                        <img src={project.image} style={{ height: '180px' }} />
+                                        <Typography variant="body1" sx={{ marginTop: '15px' }}> {project.title}</Typography>
+                                    </CardContent>
 
-                            </Card>
+                                </Card>
                             ))}
                         </Grid>
                     </TabPanel>

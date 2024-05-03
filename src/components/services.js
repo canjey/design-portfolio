@@ -45,7 +45,7 @@ export default function Services() {
         <>
         <Grid container sx={{height:'100vh'}}>
         <Grid item>
-            <Typography variant="body1">
+            <Typography variant="p">
                 My Services
             </Typography>
             <Typography variant="h3">

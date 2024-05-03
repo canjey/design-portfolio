@@ -51,7 +51,7 @@ export default function Aboutme() {
         <>
             <Grid container sx={{height:'80vh'}}>
                 <Grid item xs={6} >
-                    <Typography sx={{ fontFamily: 'poppins' }}>
+                    <Typography variant="p" sx={{ fontFamily: 'poppins' }}>
                         About me
                     </Typography>
                     <Typography variant="h3" sx={{ marginTop: "30px" }}>
@@ -77,7 +77,7 @@ export default function Aboutme() {
                     </Typography>
                     <Typography>
                     <CheckCircleOutlineIcon sx={{color:"yellow", marginRight:'10px' }}/>
-                        Web Development
+                        UI/UX Designer
                     </Typography>
                 </Grid>
                 <Grid item xs={6} sx={{ display: 'flex', flexWrap:'wrap', marginTop:'50px' }}>

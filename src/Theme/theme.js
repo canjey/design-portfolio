@@ -12,11 +12,17 @@ const darkTheme = createTheme({
         },
         typography: {
             body1: {
-                fontFamily: 'cursive'
+                fontFamily: 'cursive',
+                color:"white"
+
+
             },
             h3: {
                 fontFamily: 'poppins',
                 color: "azure"
+            },
+            p: {
+                color:"gray"
             }
         }
     })

@@ -3,28 +3,47 @@ import React from "react";
 import Card from '@mui/material/Card';
 import Grid from "@mui/material/Grid";
 import CardContent from '@mui/material/CardContent';
+import { styled } from '@mui/material/styles';
 
+
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
+  },
+}));
 
 const Myskills = () => {
     const skills = [
-        { img: '', title: 'React', proficiency: '' },
-        { img: '', title: 'CSS', proficiency: '' },
-        { img: '', title: 'JavaScript', proficiency: '' },
-        { img: '', title: 'HTML', proficiency: '' },
+        { img: 'logo.png', title: 'React', proficiency: 70 },
+        { img: 'css.png', title: 'CSS', proficiency: 90 },
+        { img: 'js.png', title: 'JavaScript', proficiency:60 },
+        { img: 'html.png', title: 'HTML', proficiency: 80 },
     ];
     return (
         <>
             {skills.map((item) => (
-                <Card sx={{ width: 150, height:200, marginLeft:'10px', marginTop:'10px' }}>
+                <Card sx={{ width: 150, height:200, marginLeft:'10px', marginTop:'10px', backgroundColor:'#9A7DCD'}}>
                     <CardContent>
-                        <Typography sx={{ fontSize: 14 }}  >
+                        <Typography textAlign ="center" sx={{ fontSize: 14 }}  >
                             {console.log(item.title)}
                             {item.title}
                         </Typography>
 
+                        <img src={item.img} style={{height:'80px'}}/>
+
                         <Typography sx={{ mb: 1.5 }}>
                             {item.description}
                         </Typography>
+                        <BorderLinearProgress variant="determinate" value={item.proficiency} />
+
                     </CardContent>
                 </Card>
             ))}
@@ -37,7 +56,7 @@ export default function Skills() {
         <>
             <Grid container columnSpacing={1} sx={{height:'50vh', marginTop:'30px', }}>
                 <Grid item xs={6}>
-                    <Typography >
+                    <Typography variant="p">
                         My Skills
                     </Typography>
                     <Typography variant="h3" sx={{marginTop:'20px'}}>

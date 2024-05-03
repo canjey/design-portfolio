@@ -48,7 +48,7 @@ export default function About() {
                             With a solid foundation in HTML, CSS, and JavaScript, I bring creativity and technical expertise to every project I work on.
                         </Typography>
                         <Button variant="contained" sx={{ marginTop: '30px', backgroundColor: '#9A7DCD' }}>Hire Me</Button>
-                        <Button variant="contained" sx={{ marginTop: '30px', marginLeft: '30px', backgroundColor: '#9A7DCD' }}>Download CV</Button>
+                        <Button variant="contained" sx={{ marginTop: '30px', marginLeft: '30px', backgroundColor: '#9A7DCD' }}><a href="cv.pdf">Download CV</a></Button>
 
                     </Grid>
                     <motion.Grid

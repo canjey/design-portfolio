@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root{
-    background-color: rgba(0, 0, 0, 0.811);
+    background-color: #000000cf;
     color: azure;
     font-family: 'Times New Roman', Times, serif;
 }
